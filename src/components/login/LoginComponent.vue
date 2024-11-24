@@ -1,6 +1,6 @@
 
   <template>
-  <div class="min-h-screen flex items-center justify-center p-4">
+  <div class="h-screen flex items-center justify-center justify-items-center p-4">
     <div class="w-full max-w-md backdrop-blur-lg bg-black bg-opacity-30 p-8 rounded-xl shadow-lg">
       <h2 className="text-3xl font-bold text-white text-center mb-6">Inicia Sesión</h2>
       <form novalidate @submit.prevent="handlerLogin()" class="space-y-4">

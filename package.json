@@ -9,12 +9,14 @@
     "preview": "vite preview",
     "test:unit": "vitest",
     "lint": "eslint . --fix",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "start": "serve dist -s -n -L -p $PORT"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.23",
     "axios": "^1.7.7",
     "pinia": "^2.2.6",
+    "serve": "^14.2.4",
     "swrv": "^1.0.4",
     "vue": "^3.5.12",
     "vue-router": "^4.4.5"
