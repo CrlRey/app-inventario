@@ -27,7 +27,6 @@ export const useProductos = defineStore('productos', () => {
     const {data} = await APIServices.getIdProduct(id)
     productDetails.value = data.data
     storeModal.openModalEdit()
-    console.log(productDetails.value);
    } catch (error) {
     console.log(error);
    }

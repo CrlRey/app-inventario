@@ -16,7 +16,7 @@
               <DialogTitle as="h3" class="text-lg font-bold leading-6 text-gray-900 justify-between flex">
 
                 {{ store.isEdit ? 'Editar producto' : 'Agregar producto' }}
-                <!-- {{ storeProduct.productDetails.nombre }} -->
+
                 <button @click="store.closeModal()">
                   <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24">
                     <path fill="currentColor"
@@ -99,9 +99,9 @@ const addOrEditName = computed({
   },
   set(value) {
     if (store.isEdit) {
-      storeProduct.productDetails.nombre = value; // Actualiza el nombre del producto a editar
+      storeProduct.productDetails.nombre = value;
     } else {
-      newItem.nombre = value; // Actualiza el nuevo producto
+      newItem.nombre = value;
     }
   }
 });

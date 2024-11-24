@@ -9,13 +9,17 @@ import ModalUserComponent from './components/modalUser/ModalUserComponent.vue';
 
 <template>
 
-  <div class="flex bg-img min-h-screen">
-    <RouterView name="login"></RouterView>
-    <RouterView name="singup"></RouterView>
-    <RouterView name="sidebar"></RouterView>
-    <RouterView></RouterView>
-  </div>
+  <div class="bg-img min-h-screen">
+    <div class="flex ">
+      <RouterView name="sidebar"></RouterView>
+      <RouterView></RouterView>
+    </div>
 
+    <div class="flex justify-center">
+      <RouterView name="login"></RouterView>
+      <RouterView name="singup"></RouterView>
+    </div>
+  </div>
 
 
 
