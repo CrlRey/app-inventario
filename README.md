@@ -22,6 +22,12 @@ Esta es una aplicación de inventario que permite a los usuarios gestionar produ
   - Interfaz interactiva y receptiva
   - Navegación con Vue Router
 
+## Login como Administrador
+Para entrar como Administrador puedes usar el siguiente usuario
+- **correo**: admin@example.com
+- **contraseña**: 4Dm1n$2024
+
+
 
 
 # app-inventario
