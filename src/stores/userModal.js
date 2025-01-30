@@ -14,7 +14,7 @@ export const useModalUser = defineStore('modalUser', () => {
   async function rolCheck() {
     try {
       const {data} = await APIServices.getAllUsers()
-      rolUser.value = data.data
+      rolUser.value = data
     } catch (error) {
       console.log(error);
     }
@@ -23,7 +23,7 @@ export const useModalUser = defineStore('modalUser', () => {
   async function selectUser(id) {
     try {
      const {data} = await APIServices.getIdUser(id)
-     rolUser.value = data.data
+     rolUser.value = data
      openModalEdit()
      console.log(rolUser.value);
     } catch (error) {
@@ -34,7 +34,7 @@ export const useModalUser = defineStore('modalUser', () => {
   async function getUsers() {
     try {
       const { data } = await APIServices.getAllUsers();
-      userList.value = data.data
+      userList.value = data
     } catch (error) {
       console.log(error);
     }

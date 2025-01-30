@@ -9,8 +9,7 @@ export const useCategoria = defineStore('categoria', () => {
   async function categories() {
     try {
       const {data} = await APIServices.getCategories()
-      categoriesList.value = data.data
-      console.log(categoriesList.value);
+      categoriesList.value = data
     } catch (error) {
       console.log(error);
     }

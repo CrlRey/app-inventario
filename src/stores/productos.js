@@ -14,7 +14,7 @@ export const useProductos = defineStore('productos', () => {
   async function products() {
     try {
       const {data} = await APIServices.getProducts()
-      listProduct.value = data.data
+      listProduct.value = data
       totalItems.value = listProduct.value.length;
     } catch (error) {
       throw Error(error)
@@ -25,7 +25,7 @@ export const useProductos = defineStore('productos', () => {
  async function selectProduct(id) {
    try {
     const {data} = await APIServices.getIdProduct(id)
-    productDetails.value = data.data
+    productDetails.value = data
     storeModal.openModalEdit()
    } catch (error) {
     console.log(error);

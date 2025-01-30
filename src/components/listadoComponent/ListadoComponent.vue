@@ -5,14 +5,28 @@ import { useModal } from '@/stores/modal';
 import { useProductos } from '@/stores/productos';
 import { onMounted } from 'vue'
 import { api } from '@/api/axios';
-
+import { useQuery } from '@tanstack/vue-query'
+import APIServices from '@/services/APIServices';
 
 const store = useModal()
 const storeProduct = useProductos()
 
+async function prGet() {
+  const res = await api.get('/productos')
+  return res.data
+}
+
+
+storeProduct.products()
+  const {isPending, isFetching, isError, data, error } = useQuery({
+  queryFn: prGet,
+    queryKey: ['productos'],
+    gcTime: 1000 * 60 * 5,
+});
 
 onMounted(() => {
-  storeProduct.products()
+
+
 })
 
 async function handlerdeleteItem(id) {
